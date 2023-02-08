@@ -1,8 +1,7 @@
-# CSIT 415-03 SP23 @ MSU, Group 6
-
-# University Shuttle Bus App
-
-# Shuttle Bus ETAs 
+# 🚍 University Shuttle Bus App 🚎
+#### **Please [click here](https://shuttlebusappgroup.github.io/shuttleBusApp/) for the landing page.**
+### Included in our app:
+**Shuttle Bus ETAs** 
 
 ## Campus Loop 
 
@@ -14,9 +13,13 @@
 
 ## East/West Route 
 
+#### similar table  as above dynamically loading sql tables
+
 ## North/South Route 
+#### similar table  as above dynamically loading sql tables
 
 ## Express Route A 
+#### similar table  as above dynamically loading sql tables
 
-## Express Route B 
-
+## Express Route B
+#### similar table  as above dynamically loading sql tables
