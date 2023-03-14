@@ -1,5 +1,5 @@
 # 🚍 University Shuttle Bus App 🚎
-#### **Please [click here](https://shuttlebusappgroup.github.io/shuttleBusApp/) for the landing page.**
+#### **Please [click here](http://34.228.254.180) for the landing page.**
 ### Included in our app:
 **Shuttle Bus ETAs** 
 
