@@ -56,47 +56,53 @@ $result = mysqli_query($db_connection,"SELECT * FROM routes");
       </div>
     </div>
   </nav>
+  <div class="container">
+    <h1 style="text-align: center;">Route editor</h1>
+    <h3 style="text-align: center;">Admin View</h3>
+    <a href = "admin_dashboard.php" class="btn btn-primary">INSERT new route</a>
+  </div>
+  <br>
 
-<h1 style="text-align: center;">Shuttle Bus App</h1>
-<h2 style="text-align: center;">(Admin Editor)</h2>
-
-<p><a href = "admin_dashboard.php" class="btn btn-primary">INSERT new route</a></p>
-
+<div class="container">
 <?php
 if (mysqli_num_rows($result) > 0) {
 ?>
   <table class="table table-bordered table-striped table table-hover">
-  
-  <tr style="background-color:black;">
-    <th>Route ID</th>
-    <th>Route Name</th>
-    <th>Route Start</th>
-    <th>Route End</th>
-    <th>Bus Number</th>
-    <th>Arrival Time</th>
-    <th>Action</th>
-  </tr>
-<?php
-$i=0;
-while($row = mysqli_fetch_array($result)) {
-?>
-<tr>
-    <td><?php echo $row["id"]; ?></td>
-    <td><?php echo $row["route_name"]; ?></td>
-    <td><?php echo $row["route_start"]; ?></td>
-    <td><?php echo $row["route_end"]; ?></td>
-    <td><?php echo $row["bus_number"]; ?></td>
-    <td><?php echo $row["arrival_time"]; ?></td>
-    <td><a href="editproc.php?id=<?php echo $row["id"];?>" class="btn btn-info">Update</a>
-	<br>
-	<a href="deleteproc.php?id=<?php echo $row["id"];?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this
-route?')">Delete</a>
- </td>
-</tr>
+    <thead class="thead-dark">
+      <tr>
+        <th>Bus No.</th>
+        <th>Route Name</th>
+        <th>Route Start</th>
+        <th>Route End</th>
+        <th>Bus Number</th>
+        <th>Current Timestamp</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+    $i=0;
+    while($row = mysqli_fetch_array($result)) {
+    ?>
+    <tr>
+        <td><?php echo $row["bus_id"]; ?></td>
+        <td><?php echo $row["route_name"]; ?></td>
+        <td><?php echo $row["current_stop"]; ?></td>
+        <td><?php echo $row["next_stop"]; ?></td>
+        <td><?php echo $row["bus_id"]; ?></td>
+        <td><?php echo $row["current_time_stamp"]; ?></td>
+        <td><a href="editproc.php?route_id=<?php echo $row["route_id"];?>" class="btn btn-info">Update</a>
+        <br>
+        <br>
+        <a href="deleteproc.php?route_id=<?php echo $row["route_id"];?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this route?')">Delete</a>
+    </td>
+    </tr>
 <?php
 $i++;
 }
 ?>
+</tbody>
+</div>
 </table>
  <?php
 }

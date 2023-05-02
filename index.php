@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 include 'config.php';
 ?>
@@ -9,6 +12,8 @@ include 'config.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>University Shuttle Bus App</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -53,56 +58,53 @@ include 'config.php';
     <h6>More updates to functionality coming soon. Please check back again soon. 👷🏾‍♀️🚧👷🏻</h6>
     <br>
   </section>
-
-  <!-- Main content -->
-  <main role="main">
+  
+  <div class="wrapper">
+    <!-- Main content -->
+    <main role="main">
     <br>
-<!-- Main content -->
-<main role="main">
-  <br>
-  <!-- Login section -->
-<section class="container">
-  <div class="form-container border p-4">
-    <h2 class="text-center">Log in</h2>
-    <form method="POST" action="/authenticate.php">
-      <div class="form-group">
-        <label for="email">Email &nbsp;&nbsp;</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
-      </div>
-      <br>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-      </div>
-      <br>
-      <div class="text-center">
-        <div class="row">
-          <div class="col-md-6">
-            <button type="submit" class="btn btn-primary d-inline-block mb-2 mr-md-2">Login</button>
-          </div>
-          <div class="col-md-6">
-            <a href="./registration.php" class="btn btn-success d-inline-block mb-2">Register</a>
-          </div>
+    <!-- Login section -->
+    <section class="container">
+    <div class="form-container border p-4">
+        <h2 class="text-center">Log in</h2>
+        <form method="POST" action="/authenticate.php">
+        <div class="form-group">
+            <label for="email">Email &nbsp;&nbsp;</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
         </div>
-      </div>
-    </form>
-  </div>
-</section>
-</main>
-
-
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <!-- Footer links -->
-      <span class="text-muted">
-        <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms-of-service.php">Terms of Service</a>
-      </span>
-      &nbsp;&copy;
-      <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
+        <br>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+        </div>
+        <br>
+        <div class="text-center">
+            <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary d-inline-block mb-2 mr-md-2">Login</button>
+            </div>
+            <div class="col-md-6">
+                <a href="./registration.php" class="btn btn-success d-inline-block mb-2">Register</a>
+            </div>
+            </div>
+        </div>
+        </form>
     </div>
-  </footer>
+    </section>
+    </main>
+
+        <!-- Footer -->
+            <footer class="bg-dark text-center text-white">
+                <div class="footer-copyright text-center py-3">
+                    <!-- Footer links -->
+                    <span class="text-muted">
+                        <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms-of-service.php">Terms of Service</a>
+                    </span>
+                    &nbsp;&copy;
+                    <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
+                </div>
+            </footer>
+</div>
 
 
   <!-- Bootstrap JavaScript dependencies -->

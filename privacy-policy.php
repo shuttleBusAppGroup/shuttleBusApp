@@ -21,7 +21,7 @@ $title = "Privacy Policy";
               <!-- Header -->
   <nav class="navbar navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="admin_dashboard.php">Home</a>
+      <a class="navbar-brand" href="index.php">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
         aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,9 +33,6 @@ $title = "Privacy Policy";
           </li>
           <li class="nav-item">
             <a class="nav-link" href="faq.php">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.php">Log out</a>
           </li>
         </ul>
       </div>
