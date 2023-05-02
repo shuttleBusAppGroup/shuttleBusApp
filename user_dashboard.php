@@ -1,3 +1,4 @@
+<! DOCTYPE html>
 <?php
 
 include 'config.php';
@@ -50,6 +51,8 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["user_type"] != "user") {
   </nav>
     <p>Welcome, <?php echo $_SESSION["username"]; ?></p>
 
+
+    
 
 <?php
 
