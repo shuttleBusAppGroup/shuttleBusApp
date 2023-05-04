@@ -15,7 +15,7 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["user_type"] != "driver") {
 
 
 // Prepare the SQL statement to get the driver's route information
-$sql = "SELECT * FROM routes WHERE route_id = ?";
+$sql = "SELECT * FROM routes WHERE route_id = '";
 $stmt = $db_connection->prepare($sql);
 $stmt->bind_param("i", $_SESSION["user_id"]);
 
