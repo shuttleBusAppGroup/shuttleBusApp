@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 session_start();
 
 // Include your database connection file
-include 'config.php';
+include_once 'config.php';
 
 $db_connection = new mysqli($host, $user, $password, $database);
 

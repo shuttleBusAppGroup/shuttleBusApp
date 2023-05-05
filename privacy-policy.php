@@ -1,54 +1,57 @@
 <?php
-$title = "Privacy Policy";
+session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuttle Bus App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Include your CSS and JavaScript files here -->
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <title><?php echo $title; ?></title>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Privacy Policy</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <!-- Your custom JavaScript file -->
+    <script src="/js/admin_scripts.js"></script>
 </head>
+
 <body>
-              <!-- Header -->
-  <nav class="navbar navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.php">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
-        aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExample07">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.php">FAQs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<br>
-<body class="bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card mt-3 bg-darker text-white">
-                    <div class="card-body">
-                        <!-- Your content here -->
-                            <h1><?php echo $title; ?></h1>
-    <p>Last updated: (Your last update date)</p>
-    <p>This Privacy Policy explains how (Your Company Name) ("we", "us", or "our") collects, uses, shares, and protects your information when you visit our website (Your Website URL). By using our website, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+    <!-- Header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="about.php">About us</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="faq.php">FAQs</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- Main Section of Admin Page -->
+        <main role="main">
+         <div class="container">
+    <p>Last updated: 05/05/2023</p>
+    <h4>This Privacy Policy explains how (Your Company Name) ("we", "us", or "our") collects, uses, shares, and protects your information when you visit our website (Your Website URL). By using our website, you agree to the collection and use of information in accordance with this Privacy Policy.</h4>
     
     <h2>Information Collection and Use</h2>
     <p>While using our website, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. This may include, but is not limited to, your name, email address, and phone number.</p>
@@ -69,33 +72,38 @@ $title = "Privacy Policy";
     <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
 
     <p>If you have any questions about this Privacy Policy, please contact us at (Your Contact Information).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+</main>
+
 </body>
 
+
     <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <!-- Footer links -->
-      <span class="text-muted">
-        <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms-of-service.php">Terms of Service</a>
-      </span>
-      &nbsp;&copy;
-      <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
+        <br><br>
+        <footer class="bg-dark text-center text-white">
+            <div class="footer-copyright text-center py-3">
+                <!-- Footer links -->
+                <span class="text-muted">
+                    <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms-of-service.php">Terms of Service</a>
+                </span>
+                &nbsp;&copy;
+        <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
     </div>
-  </footer>
-  <!-- Bootstrap JavaScript dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+</footer>
+
+
+
+<!-- Bootstrap JavaScript dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSGFpoO/ufs3fOz9piXFXUprMCzT6T7ab8AmgF6ycrhSMly1E3y"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM"
     crossorigin="anonymous"></script>
+
 </body>
+
 </html>

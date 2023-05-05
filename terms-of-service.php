@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
-    <title>About Us</title>
+    <title>Terms of Service</title>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -46,12 +46,20 @@ session_start();
     <!-- Main Section of Admin Page -->
     <main role="main">
          <div class="container">
-    <h1>About Us</h1>
-    <h3>The Shuttle Bus App is a convenient transportation solution for university students, faculty, and staff. Our mission is to provide a reliable and efficient shuttle bus service that helps our users get to their destinations on time.</h3>
-    <h3>Our fleet of modern, eco-friendly buses is equipped with comfortable seating, free Wi-Fi, and GPS tracking to ensure a smooth and pleasant ride. Our professional and experienced drivers are dedicated to maintaining the highest standards of safety and customer service.</h3>
-    <h3>The Shuttle Bus App allows users to view real-time bus schedules, find nearby bus stops, and receive important updates about route changes and delays. With the user-friendly interface and advanced features, planning your daily commute has never been easier!</h3>
-    <div>
+            <h1>Terms of Service</h1>
+            <p>By using the University Shuttle Bus App, you agree to the following terms and conditions:</p>
+            <ul>
+                <li>The Shuttle Bus App is provided "as is" and without warranty of any kind, either express or implied.</li>
+                <li>The University Shuttle Bus App is intended for the use of university students, faculty, and staff only. Unauthorized use of the app is strictly prohibited.</li>
+                <li>The University Shuttle Bus App is not responsible for any loss, damage, or injury that may occur as a result of using the service.</li>
+                <li>The University Shuttle Bus App reserves the right to modify or discontinue the service at any time, without prior notice.</li>
+                <li>The University Shuttle Bus App reserves the right to suspend or terminate the account of any user who violates these terms of service.</li>
+                <li>The University Shuttle Bus App may collect and use personal information in accordance with its privacy policy.</li>
+                <li>These terms of service are subject to change without notice.</li>
+            </ul>
+        </div>
     </main>
+
 
     <!-- Footer -->
         <br><br>
@@ -62,22 +70,23 @@ session_start();
                     <a href="privacy-policy.php">Privacy Policy</a> &middot; <a href="terms-of-service.php">Terms of Service</a>
                 </span>
                 &nbsp;&copy;
-                <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
-            </div>
-        </footer>
+        <?php echo date("Y"); ?> University Shuttle Bus App. All Rights Reserved.
+    </div>
+</footer>
 
 
 
-        <!-- Bootstrap JavaScript dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSGFpoO/ufs3fOz9piXFXUprMCzT6T7ab8AmgF6ycrhSMly1E3y"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM"
-        crossorigin="anonymous"></script>
+<!-- Bootstrap JavaScript dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSGFpoO/ufs3fOz9piXFXUprMCzT6T7ab8AmgF6ycrhSMly1E3y"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4Ck4SOF4y4Ck4C2DgHfViXydVeLm+JDM"
+    crossorigin="anonymous"></script>
 
-    </body>
+</body>
+
 </html>

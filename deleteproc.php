@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -12,26 +11,21 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["user_type"] != "admin") {
 	exit();
 }
 
-$sql = "DELETE FROM routes WHERE route_id='" . $_GET["route_id"] . "'";
-
+$sql = "DELETE FROM routes WHERE id='" . $_GET["id"] . "'";
 
 if (mysqli_query($db_connection, $sql)) {
-	
     header('Location:admin_dashboard.php');
 	exit;
 } else {
     echo "Error deleting route: " . mysqli_error($db_connection);
-?>
+}
 
+mysqli_close($db_connection);
+?>
+<!DOCTYPE html>
 <html>
     <body>
         <br>
         <a href="admin_dashboard.php">Go Back to List</a>
     </body>
 </html>
-
-<?php
-}
-
-mysqli_close($db_connection);
-?>
