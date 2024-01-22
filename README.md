@@ -1,24 +1,35 @@
 # 🚍 University Shuttle Bus App 🚎
 ### Included in our app:
-**Shuttle Bus ETAs** 
 
-## Campus Loop 
+Index of Contents
 
-| Bus Number | Current Stop | Next Stop | Current Time | Time to Next Stop | 
-|-----------|--------------|----------|--------------|------------------| 
-| 1         | Library      | Student Center | 10:00 AM | 5 minutes | 
-| 2         | Student Center | Engineering Building | 10:05 AM | 5 minutes | 
-| 3         | Engineering Building | Library | 10:10 AM | - | 
+1.	Description of Functional Requirements
+a.	Admin Module
+i.	Login
+ii.	Add/Delete/Edit Routes
+iii.	Add/Delete/Edit Announcements
+iv.	Add/Delete/Modify/View User Subscriptions
+v.	View Current Position of the shuttles
+b.	User Module
+i.	Sign up/Login
+ii.	Driver can send update current position
+iii.	Driver can send an announcement
+iv.	Other users can view current position of the shuttle
+v.	Users can also view the waiting time in any stoppage
+c.	Driver Module
+i.	Add/Delete Announcements
+ 
 
-## East/West Route 
+2.	Description of Interface Requirements
+a.	Allocation type
+b.	Front-end software
+c.	Back-end software
+d.	Operating System
+e.	Supported Browsers
+f.	Editors and Compiler Used
+3.	Description of Nonfunctional Requirements
+a.	Testing
+i.	Field Entry Validation
+ii.	Output Verification
+iii.	Security
 
-#### similar table  as above dynamically loading sql tables
-
-## North/South Route 
-#### similar table  as above dynamically loading sql tables
-
-## Express Route A 
-#### similar table  as above dynamically loading sql tables
-
-## Express Route B
-#### similar table  as above dynamically loading sql tables
