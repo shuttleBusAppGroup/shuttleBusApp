@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+
+# Secrets / API Keys
+google maps api key.rtf
+*.env
+.env
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Windows (just in case)
+Thumbs.db
+ehthumbs.db
+
+# Dependencies (if Composer is ever used)
+vendor/
