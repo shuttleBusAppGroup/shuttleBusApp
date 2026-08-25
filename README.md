@@ -110,5 +110,3 @@ This repository preserves a student prototype, not a maintained service.
 - Several legacy CRUD endpoints build SQL from request values instead of using prepared statements.
 - Some PHP pages refer to older table or column names that are not present in `bus_app.sql`.
 - The prototype does not have complete authorization, CSRF protection, automated tests, or deployment configuration.
-
-Do not expose the PHP application to the public internet. Treat the schema and database design as the primary project artifact.
