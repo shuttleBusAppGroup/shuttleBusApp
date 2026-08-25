@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
 include_once 'config.php';
 
@@ -17,7 +14,8 @@ if (mysqli_query($db_connection, $sql)) {
     header('Location:admin_dashboard.php');
 	exit;
 } else {
-    echo "Error deleting route: " . mysqli_error($db_connection);
+    error_log('Route deletion failed.');
+    echo "Unable to delete the route.";
 }
 
 mysqli_close($db_connection);

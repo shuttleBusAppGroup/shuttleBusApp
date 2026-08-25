@@ -1,0 +1,10 @@
+[extend]
+useDefault = true
+
+[[rules]]
+id = "php-hardcoded-db-config"
+description = "Hard-coded PHP database configuration"
+regex = '''(?i)\$(?:servername|db_username|dbname|host|user|username|password|database)\s*=\s*["']([^"'$\r\n]{2,})["']'''
+path = '''(?i)\.php$'''
+keywords = ["$servername", "$db_username", "$dbname", "$host", "$user", "$username", "$password", "$database"]
+secretGroup = 1

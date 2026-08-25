@@ -12,6 +12,8 @@ Icon
 google maps api key.rtf
 *.env
 .env
+.env.*
+!.env.example
 
 # IDE / Editor
 .vscode/

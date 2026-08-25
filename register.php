@@ -1,10 +1,5 @@
 <?php
 
-// Display errors for debugging purposes
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // Include your config.php file to use the existing database connection
 include_once 'config.php';
 
@@ -42,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: user_dashboard.php");
             exit;
         } else {
-            header("Location: registration.php?error=" . urlencode("Error: " . $sql . "<br>" . $db_connection->error));
+            error_log('Registration query failed.');
+            header("Location: registration.php?error=" . urlencode("Registration failed."));
             exit;
         }
     }
@@ -50,4 +46,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the connection
 $db_connection->close();
-

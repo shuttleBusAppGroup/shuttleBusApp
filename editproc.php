@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
 include_once 'config.php';
 
@@ -29,7 +26,8 @@ if (count($_POST) > 0) {
         if ($stmt1->execute() && $stmt2->execute()) {
             $message = "Route and Bus details have been updated";
         } else {
-            $message = "Error updating route and bus details: " . $stmt1->error . " " . $stmt2->error;
+            error_log('Route or bus update failed.');
+            $message = "Unable to update the route and bus details";
         }
 
         $stmt2->close();

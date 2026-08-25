@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
 include_once 'config.php';
 
@@ -89,7 +86,8 @@ if (isset($_POST['save'])) {
         if (empty($stop_id)) {
             echo "Error: stop_id cannot be retrieved. Check if the stop_name exists in the route_stops table.";
         } else {
-            echo "Error: " . $sql . " " . $stmt->error;
+            error_log('Route creation failed.');
+            echo "Unable to create the route.";
         }
         exit();
     }

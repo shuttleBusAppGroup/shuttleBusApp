@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
 include_once 'config.php';
 if (isset($_POST['save'])) {
@@ -16,8 +13,8 @@ if (isset($_POST['save'])) {
         header('Location:announcements.php');
         exit;
     } else {
-        echo "Error: " . $sql . "
-" . mysqli_error($db_connection);
+        error_log('Announcement creation failed.');
+        echo "Unable to create the announcement.";
     }
     mysqli_close($db_connection);
 }

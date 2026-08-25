@@ -23,12 +23,11 @@ if ($stmt->execute()) {
     header("Location: driver_dashboard.php");
     exit();
 } else {
-    // Handle any errors that occurred during the query execution
-    echo "Error updating current stop: " . $stmt->error;
+    error_log('Driver stop update failed.');
+    echo "Unable to update the current stop.";
 }
 
 // Close statement and connection
 $stmt->close();
 $db_connection->close();
 ?>
-

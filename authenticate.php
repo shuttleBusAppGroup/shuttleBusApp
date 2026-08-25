@@ -1,20 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// Start the session
 session_start();
-
-// Include your database connection file
 include_once 'config.php';
-
-$db_connection = new mysqli($host, $user, $password, $database);
-
-// Check the connection
-if ($db_connection->connect_error) {
-    die("Connection failed: " . $db_connection->connect_error);
-}
 
 
 // Store email and password from the submitted form
